@@ -1,0 +1,23 @@
+#selectores{
+    display: flex;
+    flex-direction: column;
+}
+
+.oldClase{
+    background: red;
+    color:yellow;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width:30%;
+
+}
+.newClase{
+    background: yellow;
+    color:red;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+.claseX{
+
+    width:30%;    
+}
