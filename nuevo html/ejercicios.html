@@ -11,21 +11,23 @@
 
 </head>
 <body>
-
+    <div id="frutero">
         <h3>El frutero</h3>
+        <div id="botonesF">      
         
-            <button id="Agregar" onclick="agregarF()" >Agregar una fruta</button>
-            <input type="text" id="fruta" required>
+            <button id="Agregar" onclick="agregarF()" class="boton">Agregar una fruta</button>
+            <input type="text" id="fruta" required class="boton">
       
         
-        <button id="Mostrar" onclick="mostrarF()">Mostrar las frutas</button>
-        <button id="Cantidad" onclick="cantidadF()">Cantidad de frutas</button>
-        <button id="alInicio" onclick="alInicio()">Agregar al inicio</button>
-        <button id="xUltima" onclick="xUltima()">Eliminar la última</button>
-        <button id="indice" onclick="indice()">Consultar index</button>
-        
+            <button id="Mostrar" onclick="mostrarF()" class="boton">Mostrar las frutas</button>
+            <button id="Cantidad" onclick="cantidadF()" class="boton">Cantidad de frutas</button>
+            <button id="alInicio" onclick="alInicio()" class="boton">Agregar al inicio</button>
+            <button id="xUltima" onclick="xUltima()" class="boton">Eliminar la última</button>
+            <button id="indice" onclick="indice()" class="boton">Consultar index</button>
+
+        </div>
         <p id="visor" ></p>
-        
+    </div> 
 
 </body>
 </html>

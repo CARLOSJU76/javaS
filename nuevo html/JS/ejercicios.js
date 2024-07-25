@@ -1,4 +1,4 @@
-//1.- Leer un entero y mostrar todos los múltipols de 5 comprendidos entre 1 y el número leído.
+//1.- Leer un entero y mostrar todos los múltiplos de 5 comprendidos entre 1 y el número leído.
 
 /*let numero= prompt("Dime un número:");
 
@@ -210,12 +210,17 @@ function alInicio() {
 
     let agregada= document.getElementById("fruta");
     let frutaI= agregada.value;
+    let parrafo= document.getElementById("visor");
+
     if(document.getElementById("fruta").value.trim()===""){
-        alert("Por favor ingresa un valor en el campo. ");
+        parrafo.textContent="Ingresa un valor en el campo. ";
         alInicio.preventDefault();
-    }else{
+    }else if(frutas.includes(frutaI)===true){
+        parrafo.textContent= frutaI + ". Esta fruta se ha incluido antes en el frutero";
+        alInicio.preventDefault();
+    } else{
         frutas.unshift(frutaI);
-        let parrafo= document.getElementById("visor");
+        
         parrafo.textContent="Has agregado "+ frutaI + " al inicio del arreglo.";
     }
 
