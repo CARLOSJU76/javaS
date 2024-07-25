@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos/estilos.css">
     <title>Document</title>
 
     <script src="JS/ejercicios.js"></script>
@@ -10,9 +11,21 @@
 
 </head>
 <body>
-        <button id="Agregar" onclick="agregarF()">Agregar una fruta</button>
-        <input type="text" id="fruta">
-        <p id="Todas_las_frutas" ></p>
+
+        <h3>El frutero</h3>
+        
+            <button id="Agregar" onclick="agregarF()" >Agregar una fruta</button>
+            <input type="text" id="fruta" required>
+      
+        
+        <button id="Mostrar" onclick="mostrarF()">Mostrar las frutas</button>
+        <button id="Cantidad" onclick="cantidadF()">Cantidad de frutas</button>
+        <button id="alInicio" onclick="alInicio()">Agregar al inicio</button>
+        <button id="xUltima" onclick="xUltima()">Eliminar la última</button>
+        <button id="indice" onclick="indice()">Consultar index</button>
+        
+        <p id="visor" ></p>
+        
 
 </body>
 </html>
