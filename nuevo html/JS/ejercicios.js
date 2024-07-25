@@ -110,11 +110,12 @@ for(let i=0; i<=can_ter; i++){
 }
 alert(termino);
 */
+/*
 let frutas=[];
 let i=0;
 let agregar;
 
-        do{
+      do{
 
             frutas[i]= prompt("Agrega una nueva fruta al arreglo: ");
                              i++;
@@ -146,5 +147,22 @@ if(frutas.includes(esta)===false){
 }
 
 alert(frutas);
+*/
+    
 
+let frutas=[];
+
+
+function agregarF (){
+
+   let frutaN= document.getElementById("fruta");
+   let valorF= frutaN.value;
+   frutas.push(valorF);
+
+   let spanResultado = document.getElementById('Todas_las_frutas');
+   spanResultado.textContent = frutas;
+   alert(frutas);
+
+   
+}
 
