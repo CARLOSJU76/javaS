@@ -111,11 +111,40 @@ for(let i=0; i<=can_ter; i++){
 alert(termino);
 */
 let frutas=[];
-while (frutas[i]!="F" || frutas[i]!="f"){
-    frutas[i]=prompt("Agrega una fruta al arreglo. Digita f si no deseas ingresar mas elementos:  ");
+let i=0;
+let agregar;
 
-}
+        do{
+
+            frutas[i]= prompt("Agrega una nueva fruta al arreglo: ");
+                             i++;
+            agregar=prompt ("Deseas agregar una nueva fruta? ... Digita S");
+
+
+}while (agregar==="s" || agregar==="S");
+
 let cantidad= frutas.length;
-alert ("Hay "+ cantidad + " en el arreglo.");
+
+alert ("Hay "+ cantidad + " frutas en el arreglo.");
+
+let cola= prompt("Agrega una fruta en la cola del arreglo: ");
+frutas[(cantidad+1)]=cola;
+alert(frutas);
+
+let inicio= prompt("Agrega una fruta al inicio del arreglo: ");
+frutas.unshift(inicio);
+alert(frutas);
+alert("Eliminando el último elemento del arreglo: ")
+frutas.pop();
+alert(frutas);
+let esta=prompt("Digita la fruta de la que quieras saber su posición en el arreglo: ");
+if(frutas.includes(esta)===false){
+    alert("El elemento que digitaste no se encuentra en el arreglo.")
+
+}else{
+   alert(esta + " Se encuentra en la posición " + frutas.indexOf(esta)+ " del arreglo.");
+}
+
+alert(frutas);
 
 
