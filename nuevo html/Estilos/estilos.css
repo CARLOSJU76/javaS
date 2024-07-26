@@ -18,9 +18,11 @@
     justify-content: center;
     width:90%;
     background-color: goldenrod;
-
+   
 }
 .boton{
     flex: 1 1 70 px;
     margin:0.5%;
+    font-size: 1.2vw;
+
 }

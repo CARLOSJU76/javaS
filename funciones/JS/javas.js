@@ -76,3 +76,100 @@ function cambiarT(){
     }
 
 }
+
+function xId(){
+    let elemento= document.querySelectorAll("#id1");
+    for(let i=0; i<elemento.length; i++){
+        if(i%2===0){
+            elemento[i].style.background="green";
+            elemento[i].style.color="red";
+            elemento[i].style.fontStyle="bold";
+        }else{
+            elemento[i].style.background="red";
+            elemento[i].style.color="green";
+            elemento[i].style.fontStyle="italic";
+        }
+        
+    }
+    
+    
+}
+function xClase() {
+    let elemento= document.querySelectorAll(".miClase");
+    for(let i=0; i<elemento.length; i++){
+        if(i%2===0){
+            elemento[i].style.background="red";
+            elemento[i].style.color="white";
+        }else{
+            elemento[i].style.background="yellow";
+            elemento[i].style.color="violet";
+        }
+       
+    }    
+}
+
+function xTag() {
+    let elemento= document.querySelectorAll("p");
+    for(let i=0; i<elemento.length; i++){
+            if(i%2===0){
+                elemento[i].style.background="black";
+                elemento[i].style.color="yellow";
+                elemento[i].textContent= "Ejecutado mediante etiquetas";
+            }else{
+                elemento[i].style.background="orange";
+                elemento[i].style.color="blue";
+                elemento[i].textContent= "Ejecutado mediante etiquetas";
+                elemento[i].innerHTML="<i>Ejecutado mediante etiquetas</i>";
+
+            }
+
+        
+    }
+
+}
+
+function enviando(){
+    let elemento= document.querySelector("#boton_enviar");
+    elemento.textContent="Enviado";
+
+    elemento.style.background="red";
+    elemento.style.color="white";
+    elemento.style.fontStyle="italic";
+
+}
+function aNegrita() {
+    let elemento= document.querySelector("#miBoton");
+    elemento.innerHTML="<i>Cambiado a itálica</i>";
+    elemento.style.background="black";
+    elemento.style.color="white";
+}
+
+function nuevoElemento() {
+    let elemento= document.getElementById("elementoN");
+    let nuevoParrafo= document.createElement('p');
+    nuevoParrafo.textContent= "Este es el nuevo párrafo.";
+    elemento.appendChild(nuevoParrafo);
+
+}
+function remover() {
+    let elemento= document.getElementById("elementoN1");
+    elemento.remove();
+}
+
+
+
+
+document.getElementById("botonClick").addEventListener('click', function() {
+    let elemento= document.getElementById("alertas");
+    elemento.textContent= "El botón ha sido cliqueado!!";
+
+});
+
+document.getElementById("parrafoClick").addEventListener("dblclick", function(){
+    alert("Has hecho doble click en el párrafo!!");
+});
+
+document.getElementById("etiClick").addEventListener("keydown", function(event){
+    alert("Has opturado el teclado."+ event.key);
+});
+
