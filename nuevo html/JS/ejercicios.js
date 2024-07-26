@@ -168,10 +168,12 @@ function agregarF (){
     
     }else if(frutas.includes(valorF)=== true){
         agregada.textContent= valorF + ". Esta fruta se ha incluido antes en el frutero. ";
+        frutaN.value="";
         agregarF.preventDefault();
     }else{
-    frutas.push(valorF);
-    agregada.textContent=("Agregaste: "+ valorF + " al frutero.");
+        frutas.push(valorF);
+        agregada.textContent=("Agregaste: "+ valorF + " al frutero.");
+        frutaN.value="";
     }   
 }
 
@@ -217,9 +219,11 @@ function alInicio() {
         alInicio.preventDefault();
     }else if(frutas.includes(frutaI)===true){
         parrafo.textContent= frutaI + ". Esta fruta se ha incluido antes en el frutero";
+        agregada.value="";
         alInicio.preventDefault();
     } else{
         frutas.unshift(frutaI);
+       agregada.value="";
         
         parrafo.textContent="Has agregado "+ frutaI + " al inicio del arreglo.";
     }
@@ -231,10 +235,22 @@ function indice() {
     let parrafo1=document.getElementById("visor");
     
 
-    if (frutas.includes(frutaInd)===false){
+    if (parrafo.value.trim()===""){
+        parrafo1.textContent="Digita un elemento para realizar la consulta.";
+        parrafo.value="";
+    }else if(frutas.includes(frutaInd)===false){
         parrafo1.textContent="La fruta no se encuentra en el frutero.";
+        parrafo.value="";
     }else{
         parrafo1.textContent=frutaInd+" se encuentra en la posición: "+ frutas.indexOf(frutaInd) + " del arreglo. ";
+        parrafo.value="";
     }
 
 }
+let elemento= document.getElementById("fruta");
+
+elemento.addEventListener('keydown', function(event){
+    if(event.key==='Enter'){
+        agregarF();
+    }
+});

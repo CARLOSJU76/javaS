@@ -155,21 +155,25 @@ function remover() {
     let elemento= document.getElementById("elementoN1");
     elemento.remove();
 }
-
-
-
-
-document.getElementById("botonClick").addEventListener('click', function() {
-    let elemento= document.getElementById("alertas");
-    elemento.textContent= "El botón ha sido cliqueado!!";
-
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("botonC").addEventListener('click', function() {
+        
+        let elemento= document.getElementById("botonC");
+        elemento.textContent="¡Hiciste click en el botón!!";
+        
+    });
 });
 
-document.getElementById("parrafoClick").addEventListener("dblclick", function(){
+document.getElementById("parrafoC").addEventListener("dblclick", function(){
+    let elemento= document.getElementById("parrafoC");
+    elemento.textContent="Has hecho doble click sobre el párrafo!!";
     alert("Has hecho doble click en el párrafo!!");
+    
 });
 
-document.getElementById("etiClick").addEventListener("keydown", function(event){
+document.getElementById("etiC").addEventListener("keydown", function(event){
     alert("Has opturado el teclado."+ event.key);
+    let elemento= document.getElementById("etiC");
+    elemento.value= "Obturaste la tecla: "+ event.key;
 });
 
