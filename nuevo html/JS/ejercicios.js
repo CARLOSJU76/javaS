@@ -10,6 +10,25 @@ for( let i=0; i<=numero; i++){
     }
 
 }*/
+let elemento1= document.getElementById("numero");
+function multi5(){
+    
+    let numero1=document.getElementById("numero").value;
+    let numeros1=[];
+    let parrafox=document.getElementById("visor1");
+
+    for( let i=1; i<=numero1; i++){
+        if(i%5===0 ){
+            numeros1.push(i);
+        }
+}
+parrafox.textContent= "Los múltiplos de cinco son: "+ numeros1;
+}
+elemento1.addEventListener('keydown', function (event){
+    if(event.key==='Enter'){
+        multi5();
+    }
+});
 
 // 2.- Leer un número entero y determinar si es primo.
 

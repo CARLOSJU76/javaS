@@ -1,4 +1,4 @@
-#visor{
+.visor{
     border:1px solid black;
     width:88%;
     font-style:italic;
@@ -25,4 +25,10 @@
     margin:0.5%;
     font-size: 1.2vw;
 
+}
+#ejercicio1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(136, 171, 146);
 }
